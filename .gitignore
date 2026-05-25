@@ -1,0 +1,9 @@
+node_modules/
+.env
+*.db
+*.db-journal
+backend-out.txt
+backend-err.txt
+frontend-out.txt
+frontend-err.txt
+dist/
