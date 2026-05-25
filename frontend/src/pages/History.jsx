@@ -36,7 +36,7 @@ export default function History() {
   if (loading) return <div className="flex items-center justify-center h-full"><div className="animate-spin w-8 h-8 border-4 border-primary-600 border-t-transparent rounded-full" /></div>;
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       <PageHeader title="Campaign History" subtitle="All your past and scheduled campaigns" />
       <div className={`${selected ? 'grid grid-cols-5 gap-6' : ''}`}>
         <div className={selected ? 'col-span-3' : ''}>

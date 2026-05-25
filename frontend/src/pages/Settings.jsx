@@ -34,7 +34,7 @@ export default function Settings() {
   };
 
   return (
-    <div className="p-8 max-w-2xl">
+    <div className="p-4 sm:p-8 max-w-2xl">
       <PageHeader title="Settings" subtitle="Configure your Arkesel integration" />
 
       <div className="space-y-6">

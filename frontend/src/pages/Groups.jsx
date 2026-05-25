@@ -45,7 +45,7 @@ export default function Groups() {
   };
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       <PageHeader
         title="Groups"
         subtitle="Organise contacts into groups for targeted campaigns"

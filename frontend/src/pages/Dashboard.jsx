@@ -34,7 +34,7 @@ export default function Dashboard() {
   );
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       <PageHeader
         title="Dashboard"
         subtitle="Overview of your SMS campaigns"
@@ -53,7 +53,7 @@ export default function Dashboard() {
       </div>
 
       {balance && (
-        <div className="card mb-8 flex items-center justify-between bg-gradient-to-r from-primary-600 to-primary-700 text-white border-0">
+        <div className="card mb-8 flex flex-wrap items-center justify-between gap-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white border-0">
           <div>
             <p className="text-primary-100 text-sm font-medium">Arkesel Account Balance</p>
             <p className="text-3xl font-bold mt-1">{balance?.balance ?? '—'} SMS Credits</p>

@@ -30,7 +30,7 @@ export default function Reports() {
   }));
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       <PageHeader title="Reports & Analytics" subtitle="Visualise your SMS campaign performance" />
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">

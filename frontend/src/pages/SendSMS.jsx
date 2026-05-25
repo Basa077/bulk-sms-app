@@ -85,7 +85,7 @@ export default function SendSMS() {
   const msgParts = Math.ceil(message.length / MAX_SMS_CHARS) || 1;
 
   return (
-    <div className="p-8">
+    <div className="p-4 sm:p-8">
       <PageHeader title="Send SMS" subtitle="Create and send a bulk SMS campaign" />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -106,7 +106,7 @@ export default function SendSMS() {
           <div className="card space-y-4">
             <h2 className="font-semibold text-gray-900">Recipients</h2>
 
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <div className="flex-1">
                 <label className="block text-sm font-medium text-gray-700 mb-1">Import from Group</label>
                 <select className="input" value={selectedGroup} onChange={e => { setSelectedGroup(e.target.value); loadGroupPhones(e.target.value); }}>

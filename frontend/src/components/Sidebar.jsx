@@ -10,9 +10,15 @@ const nav = [
   { to: '/settings', icon: '⚙️', label: 'Settings' },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({ isOpen, onClose }) {
   return (
-    <aside className="w-64 bg-gray-900 flex flex-col h-screen shrink-0">
+    <aside
+      className={`
+        fixed inset-y-0 left-0 z-30 w-64 bg-gray-900 flex flex-col h-screen shrink-0 transition-transform duration-200
+        md:static md:translate-x-0
+        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+      `}
+    >
       <div className="px-6 py-6 border-b border-gray-800">
         <div className="flex items-center gap-3">
           <div className="w-9 h-9 bg-primary-600 rounded-xl flex items-center justify-center text-white font-bold text-lg">S</div>
@@ -22,11 +28,12 @@ export default function Sidebar() {
           </div>
         </div>
       </div>
-      <nav className="flex-1 px-3 py-4 space-y-1">
+      <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
         {nav.map(({ to, icon, label }) => (
           <NavLink
             key={to}
             to={to}
+            onClick={onClose}
             className={({ isActive }) =>
               `flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 ${
                 isActive
